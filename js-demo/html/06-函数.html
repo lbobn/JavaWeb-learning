@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    function add1(a, b) {
+        return a + b;
+    }
+
+    let result = add1(1, 2);
+    alert(result);//3
+
+
+    var add2 = function (a, b) {
+        return a + b;
+    }
+
+    let add = add2(3, 4);
+    alert(add);//7
+
+    let add3 = add2(1, 2, 3, 4, 5);//后面的3,4,5没有接收       3
+    let add4 = add2(1);//NaN
+    alert(add3);
+    alert(add4);
+
+</script>
+</body>
+</html>

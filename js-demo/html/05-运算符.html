@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    /*
+    * ==:
+    *     判断类型  转换类型  再比较
+    * ===:全等于
+    *     判断类型 不同直接false
+    *
+    *
+    * */
+    var age = 20;
+    var a = "20";
+
+    // alert(age == a);
+
+    //alert(age === a);
+
+    /*
+    * 类型装换:
+    *       *转为number
+    *           1.string :按照字面值转为数字,如果不是转为NaN(Not a number).一般使用parseInt
+    *           2.boolean:  true->1     false->0
+    *       *其他转boolean
+    *           1.number:   0和NaN->true   其他->false
+    *           2.string:   空字符串->false  其他->true
+    *           3.null:     false
+    *           4.undefined:false
+    *
+    *
+    * */
+
+    //var str = +"20";
+    var str2 = "20";
+    //alert(str + 1);
+    //alert(parseInt(str2) + 1);
+
+    var b = +true;
+    alert(b);
+
+    //健壮性判断
+    var str = '';
+    //if(str != null && str.length > 0){
+    if (str) {
+        alert("操作");
+    } else {
+        alert("字符串为空")
+    }
+
+
+</script>
+</body>
+</html>
