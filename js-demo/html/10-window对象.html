@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    //alert
+    window.alert("alert");
+
+    //confirm  点击确定会返回true,点取消返回false
+    let flag = confirm("确定?");
+    alert(flag);
+
+    //定时器
+
+    /*
+    * setTimeout(function,时间(毫秒值))  :一定时间间隔执行一个function,只执行一次
+    *
+    * setInterval(function,时间(毫秒值)) :一定时间间隔执行一个function,循环执行
+    *
+    * */
+    setTimeout(function () {
+        alert("执行一次");
+    }, 2000);
+
+    setInterval(function () {
+        alert("重复执行");
+    }, 2000);
+
+</script>
+</body>
+</html>
