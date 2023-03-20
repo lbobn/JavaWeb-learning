@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="button" value="点我" onclick="on()"> <br>
+<input type="button" value="再点我" id="btn">
+
+<script>
+    function on() {
+        alert("我被电了");
+    }
+
+    let button = document.getElementById("btn");
+    button.onclick = function () {
+        alert("我也被点了");
+    }
+
+</script>
+
+</body>
+</html>
