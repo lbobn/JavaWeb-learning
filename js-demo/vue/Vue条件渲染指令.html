@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+        <!--
+        v-if 条件不成立浏览器不渲染
+        v-show 条件不成立同样渲染,只是通过css样式dispaly控制元素不展示而已
+        v-for 列表渲染
+        -->
+        <div id="app">
+            <!-- v-if -->
+            年龄<input type="text" v-model="age">经判定,为:
+            <span v-if="age<=35">年轻人(35及以下)</span>
+            <span v-else-if="age>35 && age<60">中年人(35-60)</span>
+            <span v-else>老年人(60及以上)</span>
+
+
+            <br><br>
+            <!-- v-show -->
+            年龄<input type="text" v-model="age">经判定,为:
+            <span v-show="age<=35">年轻人(35及以下)</span>
+            <span v-show="age>35 && age<60">中年人(35-60)</span>
+            <span v-show>老年人(60及以上)</span>
+
+            <br><br>
+            <!-- v-for -->
+            <div v-for="addr in address"> {{addr}}</div>
+            <hr>
+            <div v-for="(addr,index) in address">{{index + 1}} : {{addr}}</div>
+
+        </div>
+    </body>
+
+    <script>
+        new Vue({
+            el: "#app",//vue接管区域
+            data: {
+                age: 20,
+                address: ["北京", "上海", "西安", "成都", "深圳"]
+            },
+            methods: {}
+        })
+    </script>
+</html>

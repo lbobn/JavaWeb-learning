@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!--
+            v-bind    为html标签绑定属性值,如href,css样式等
+            v-model   在表单元素上创建双向数据绑定
+            v-on  为HTML标签绑定事件
+            -->
+
+            <!--绑定的变量必须在数据模型声明-->
+            <!-- v-bind, -->
+            <a v-bind:href="url"> 链接1 </a>
+            <a :href="url"> 链接2 </a>  <!--省略-->
+
+            <!-- v-model -->
+            <input type="text" v-model="url">
+
+            <!-- v-on -->
+            <input type="button" value="点我1" v-on:click="handle()">
+            <input type="button" value="点我2" @click="handle()">    <!--省略-->
+        </div>
+    </body>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                url: "https://www.baidu.com"
+            },
+            methods: {
+                handle: function () {
+                    alert("我被点了");
+                }
+            }
+        })
+    </script>
+</html>
