@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>事件案例</title>
+    </head>
+    <body>
+        <img src="../../imgs/off.gif" id="light"><br>
+
+        <input type="button" value="点亮" onclick="on()">
+        <input type="button" value="熄灭" onclick="off()">
+        <br><br>
+
+        <input type="text" id="name" value="ITCAST" onfocus="lower()" onblur="upper()">
+        <br><br>
+
+        <input type="checkbox" name="hobby"> 电影
+        <input type="checkbox" name="hobby"> 音乐
+        <input type="checkbox" name="hobby"> 游戏
+        <br>
+        <input type="button" value="全选" onclick="checkAll()">
+        <input type="button" value="反选" onclick="reverse()">
+    </body>
+    <script>
+        //1.灯的开关事件
+        function on() {
+            let img = document.getElementById("light");
+            img.src = "../../imgs/on.gif";
+        }
+
+        function off() {
+            let img = document.getElementById("light");
+            img.src = "../../imgs/off.gif";
+        }
+
+
+        //2.输入框聚焦小写,离焦后大写
+        function lower() {
+            let name = document.getElementById("name");
+            name.value = name.value.toLowerCase();
+        }
+
+        function upper() {
+            let name = document.getElementById("name");
+            name.value = name.value.toUpperCase();
+        }
+
+
+        //3.全选选中所有,反选反向选择
+        function checkAll() {
+            let hobbies = document.getElementsByName("hobby");
+            for (let i = 0; i < hobbies.length; i++) {
+                let element = hobbies[i];
+                element.checked = true;
+            }
+        }
+
+        function reverse() {
+            let hobbies = document.getElementsByName("hobby");
+            for (let i = 0; i < hobbies.length; i++) {
+                let element = hobbies[i];
+                element.checked = element.checked == true ? false : true;
+            }
+        }
+
+    </script>
+
+</html>

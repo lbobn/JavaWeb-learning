@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
 
 
-<img id="img" src="../../imgs/off.gif"><br>
+        <img id="img" src="../../imgs/off.gif"><br>
 
-<div class="cls">你好</div>
-<br>
-<div class="cls">JavaScript</div>
-<br>
+        <div class="cls">你好</div>
+        <br>
+        <div class="cls">JavaScript</div>
+        <br>
 
-<input type="checkbox" name="hobby"> 电影
-<input type="checkbox" name="hobby"> 游戏
-<input type="checkbox" name="hobby"> 旅游
+        <input type="checkbox" name="hobby"> 电影
+        <input type="checkbox" name="hobby"> 游戏
+        <input type="checkbox" name="hobby"> 旅游
 
-<br>
+        <br>
 
-<script>
-    /*
-    * 使用Document对象的方法获取
-    * getElementById:根据id的属性值获取,返回一个element对象
-    * getElementByTagName:根据标签名获取,返回element对象数组
-    * getElementByName:根据name属性值获取,返回element对象数组
-    * getElementByClassName:根据class属性值获取,返回element对象数组
-    *
-    * */
-    let img = document.getElementById("img");
-    document.write(img + "<br><br>");
-    img.src = "../../imgs/on.gif";//修改图片地址
-
-
-    let div = document.getElementsByTagName("div");
-    /*
-    * style:设置元素CSS样式
-    * innerHTML:设置元素内容
-    * */
-    div[0].style.color = "red";//修改字体颜色
-    div[1].innerHTML = "哈哈";//修改内容
-    document.write(div[0] + "<br>" + div[1] + "<br><br>");
+        <script>
+            /*
+            * 使用Document对象的方法获取
+            * getElementById:根据id的属性值获取,返回一个element对象
+            * getElementByTagName:根据标签名获取,返回element对象数组
+            * getElementByName:根据name属性值获取,返回element对象数组
+            * getElementByClassName:根据class属性值获取,返回element对象数组
+            *
+            * */
+            let img = document.getElementById("img");
+            document.write(img + "<br><br>");
+            img.src = "../../imgs/on.gif";//修改图片地址
 
 
-    let hobbies = document.getElementsByName("hobby");
-    for (let i = 0; i < hobbies.length; i++) {
-        // document.write(hobbies[i] + "<br><br>");
-        hobbies[i].checked = true;//设置默认全选
-    }
+            let div = document.getElementsByTagName("div");
+            /*
+            * style:设置元素CSS样式
+            * innerHTML:设置元素内容
+            * */
+            div[0].style.color = "red";//修改字体颜色
+            div[1].innerHTML = "哈哈";//修改内容
+            document.write(div[0] + "<br>" + div[1] + "<br><br>");
 
 
-    let classes = document.getElementsByClassName("cls");
-    for (let i = 0; i < classes.length; i++) {
-        document.write(classes[i] + "<br>");
-    }
-    document.write("<br>");
+            let hobbies = document.getElementsByName("hobby");
+            for (let i = 0; i < hobbies.length; i++) {
+                // document.write(hobbies[i] + "<br><br>");
+                hobbies[i].checked = true;//设置默认全选
+            }
 
 
-</script>
-</body>
+            let classes = document.getElementsByClassName("cls");
+            for (let i = 0; i < classes.length; i++) {
+                document.write(classes[i] + "<br>");
+            }
+            document.write("<br>");
+
+
+        </script>
+    </body>
 </html>
