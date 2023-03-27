@@ -21,7 +21,7 @@
 
             //3.获取服务响应数据
             xmlHttpRequest.onreadystatechange = function () {
-                if (xmlHttpRequest.readyState == 4 && xmlHttpRequest.status == 200) {
+                if (xmlHttpRequest.readyState === 4 && xmlHttpRequest.status === 200) {
                     document.getElementById('div1').innerHTML = xmlHttpRequest.responseText;
                 }
             }
